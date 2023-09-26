@@ -1,0 +1,13 @@
+/* MERN Theme */
+
+// Import utilities
+@import "core/utils/reset";
+
+// Import Bootstrap source files
+@import "bootstrap/scss/bootstrap";
+
+// Import core styles
+@import "core/core";
+
+// Import custom styles
+@import "custom";
