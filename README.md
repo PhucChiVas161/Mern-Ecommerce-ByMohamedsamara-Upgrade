@@ -11,3 +11,27 @@ This is the [Mern-Ecommerce by mohamedsamara](https://github.com/mohamedsamara/m
 ## Install
 
 1. Clone project
+
+```
+git clone https://github.com/PhucChiVas161/Mern-Ecommerce-ByMohamedsamara-Upgrade.git
+```
+
+2. Move in to project
+
+```
+cd "project"
+```
+
+3. Install dependencies
+
+```
+yarn install
+```
+
+- **_You shoud use Yarn v3.x.x_**
+
+4. Start development
+
+```
+yarn start
+```
