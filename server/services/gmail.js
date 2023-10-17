@@ -1,37 +1,43 @@
-const Mailgun = require("mailgun-js");
+const nodemailer = require("nodemailer");
 
 const template = require("../config/template");
 const keys = require("../config/keys");
 
-const { key, domain, sender } = keys.mailgun;
+const { user, pass } = keys.gmail;
 
-class MailgunService {
+class GmailService {
   init() {
     try {
-      return new Mailgun({
-        apiKey: key,
-        domain: domain,
+      return nodemailer.createTransport({
+        service: "gmail",
+        port: 587,
+        secureConnection: false,
+        auth: {
+          user: user,
+          pass: pass,
+        },
       });
     } catch (error) {
-      console.warn("Missing mailgun keys");
+      console.error(error);
+      console.warn("Missing gmail keys");
     }
   }
 }
 
-const mailgun = new MailgunService().init();
+const gmail = new GmailService().init();
 
 exports.sendEmail = async (email, type, host, data) => {
   try {
     const message = prepareTemplate(type, host, data);
 
     const config = {
-      from: `MERN Store! <${sender}>`,
+      from: `MERN Store! <${user}>`,
       to: email,
       subject: message.subject,
-      text: message.text,
+      html: message.html,
     };
 
-    return await mailgun.messages().send(config);
+    return await gmail.sendMail(config);
   } catch (error) {
     return error;
   }
