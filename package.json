@@ -1,6 +1,7 @@
 {
   "name": "merncousre",
   "packageManager": "yarn@3.6.1",
+  "private": true,
   "scripts": {
     "start": "concurrently \"yarn run server\" \"yarn run client\"",
     "server": "yarn workspace server dev",
