@@ -4574,6 +4574,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer@npm:^6.9.5":
+  version: 6.9.7
+  resolution: "nodemailer@npm:6.9.7"
+  checksum: 0cf66d27aed3bd2cbdff9939402cec3d2119c31b2b9ff4af3bcd59f48287ea75b90c0ce2cd9eb0df838164972cd25581b4b723c91fd673e2608bcb28445ccb1b
+  languageName: node
+  linkType: hard
+
 "nodemon@npm:^3.0.1":
   version: 3.0.1
   resolution: "nodemon@npm:3.0.1"
@@ -6048,6 +6055,7 @@ __metadata:
     mongoose-slug-generator: ^1.0.4
     mongoose-slug-updater: ^3.3.0
     multer: ^1.4.5-lts.1
+    nodemailer: ^6.9.5
     nodemon: ^3.0.1
     passport: ^0.6.0
     passport-facebook: ^3.0.0
